@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.patipatphiphi.mydemoapplication.MainActivity">
+    <ImageView
+        android:id="@+id/bg_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/titile_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyApp"
+        android:textSize="24sp"
+        android:layout_below="@+id/bg_login"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/email_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titile_app"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mail:"
+       />
+    <EditText
+        android:id="@+id/et_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="input email"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/email_layout"
+        android:layout_centerInParent="true">
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PASSWORD:"
+        android:layout_below="@id/email"/>
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:layout_toRightOf="@+id/password"
+        android:layout_below="@id/email"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+    android:id="@+id/btn_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:weightSum="2"
+    android:layout_below="@+id/password_layout">
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/login"/>
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="signup"/>
+</LinearLayout>
+    <TextView
+        android:id="@+id/noti_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_layout"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>
